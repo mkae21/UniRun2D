@@ -1,0 +1,20 @@
+# Unity 에셋 파일도 CRLF
+*.meta text eol=crlf
+*.unity text eol=crlf
+*.prefab text eol=crlf
+*.asset text eol=crlf
+
+# C# 코드도 CRLF
+*.cs text eol=crlf
+
+# JSON, XML도 CRLF
+*.json text eol=crlf
+*.xml text eol=crlf
+
+# 바이너리는 변환 금지
+*.png -text
+*.jpg -text
+*.fbx -text
+*.wav -text
+*.mp3 -text
+*.dll -text
