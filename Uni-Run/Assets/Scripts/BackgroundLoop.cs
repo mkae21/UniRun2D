@@ -6,10 +6,10 @@ public class BackgroundLoop : MonoBehaviour {
 
     private void Awake() {
         // 가로 길이를 측정하는 처리
-        boxCollider2D = GetComponent<boxCollider2D>();
-        if(boxCollider2D != null)
+        BoxCollider2D backgroundCollider = GetComponent<BoxCollider2D>();
+        if( backgroundCollider != null)
         {
-            width = boxCollider2D.size.x;
+            width = backgroundCollider.size.x;
         }
     }
 
@@ -21,11 +21,9 @@ public class BackgroundLoop : MonoBehaviour {
         }
     }
 
-    // 위치를 리셋하는 메서드
+    // 위치를 리셋하는 메서드, Position 값은 Property로 제한이 되어있음.
     private void Reposition() {
-        // transform.position.x = width * 2;
-
         Vector2 offset = new Vector2(width * 2, 0);
-        transform.position = (Vector2)transform.position + offset;
+        transform.position = (Vector2)transform.position + offset; //Position은 Vector3이기 때문에 Vector2로 캐스팅 필요함.
     }
 }
