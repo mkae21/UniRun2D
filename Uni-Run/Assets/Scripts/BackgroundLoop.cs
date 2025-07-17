@@ -17,7 +17,7 @@ public class BackgroundLoop : MonoBehaviour {
         // 현재 위치가 원점에서 왼쪽으로 width 이상 이동했을때 위치를 리셋
         if(transform.position.x <= -width)
         {
-            Reposition();
+            Reposition(); 
         }
     }
 

@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour {
 
         rb.velocity = Vector2.zero;
         isDead = true;
+        GameManager.instance.OnPlayerDead(); // 게임 매니저 인스턴스 접근 후, OnPlayerDead 메서드 호출
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
