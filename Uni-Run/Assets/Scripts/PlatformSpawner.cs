@@ -51,6 +51,7 @@ public class PlatformSpawner : MonoBehaviour {
             platforms[currentIndex].transform.position = new Vector2(xPos, yPos);
             currentIndex++;
 
+            // 현재 순번 증가시키고, 3개를 넘어가면 0번째 인덱스로 되돌리기
             if(currentIndex >= count)
             {
                 currentIndex = 0;
